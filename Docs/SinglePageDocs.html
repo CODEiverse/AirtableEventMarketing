@@ -1,0 +1,57 @@
+<html><head><title>AirtableEventMarketing - Single Page Doc s</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" /></head><body><h3>AirtableEventMarketing Raw Data model</h3><a class="btn btn-sm btn-primary" href="Index.html"><<&nbsp;Back Interactive Object Explorer</a><table style="width: 100%"><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Attendance"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#EventDate">EventDate</a>
+                        
+                        
+                            
+                                , <a href="#VIP">VIP</a>
+                        
+                        
+                        </div><h2>Attendance</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>AttendanceId</td><td>TEXT</td><td></td></tr><tr><td>Notes</td><td>TEXT</td><td></td></tr><tr><td>Event</td><td>TEXT</td><td></td></tr><tr><td>Person</td><td>TEXT</td><td></td></tr><tr><td>Invited</td><td>BOOLEAN</td><td></td></tr><tr><td>RSVPed</td><td>BOOLEAN</td><td></td></tr><tr><td>Showedup</td><td>BOOLEAN</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="EventDate"></a>
+                        <hr /><div style="float: right;">
+                        Parented by 
+                        
+                            
+                                <a href="#Venue">Venue</a>
+                        
+                        
+                        </div><h2>EventDate</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each EventDate may have zero or more associated
+                          
+                            
+                                <a href="#Attendance">
+                                
+                                    Attendances
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>EventDateId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>Type</td><td>TEXT</td><td></td></tr><tr><td>StartDate</td><td>xs:date</td><td></td></tr><tr><td>Details</td><td>TEXT</td><td></td></tr><tr><td>EndDate</td><td>xs:date</td><td></td></tr><tr><td>Venue</td><td>TEXT</td><td></td></tr><tr><td>ofAttendees</td><td>INT32</td><td></td></tr><tr><td>ofInvites</td><td>INT32</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="VIP"></a>
+                        <hr /><h2>VIP</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each VIP may have zero or more associated
+                          
+                            
+                                <a href="#Attendance">
+                                
+                                    Attendances
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>VIPId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>Location</td><td>TEXT</td><td></td></tr><tr><td>Email</td><td>TEXT</td><td></td></tr><tr><td>Address</td><td>TEXT</td><td></td></tr><tr><td>Type</td><td>TEXT</td><td></td></tr><tr><td>Notes</td><td>TEXT</td><td></td></tr><tr><td>Eventsattended</td><td>INT32</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr><tr><td colspan="3"><div style="clear: both"></div><div class="row"><div class="col-md-12">
+                        <a name="Venue"></a>
+                        <hr /><h2>Venue</h2><div style="padding: 0.25em; font-size: 0.8em; font-weight: bold;"></div><div style="padding: 1em;">
+                            Each Venue may have zero or more associated
+                          
+                            
+                                <a href="#EventDate">
+                                
+                                    EventDates
+                                    
+                                </a>
+                        
+                        </div></div></div></td></tr><tr><th align="left">Name</th><th align="left">Type</th><th align="left">Original Name</th></tr><tr><td>VenueId</td><td>TEXT</td><td></td></tr><tr><td>Name</td><td>TEXT</td><td></td></tr><tr><td>Address</td><td>TEXT</td><td></td></tr><tr><td>Notes</td><td>TEXT</td><td></td></tr><tr><td>MapCache</td><td>TEXT</td><td></td></tr><tr><td>createdTime</td><td>DATETIME</td><td></td></tr></table></body></html>

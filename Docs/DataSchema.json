@@ -1,0 +1,535 @@
+
+{
+  "Ontology": {
+    "OntologyGroups": {
+      "OntologyGroup": {
+        "Name": "AirtableEventMarketing",
+        "ObjectDefs": {
+          "ObjectDef": [
+            {
+              "EntityId": "recNep49fv8ldTSQP",
+              "Name": "Attendance",
+              "DisplayName": "Attendance",
+              "AirtableName": "Attendance",
+              "createdTime": "2018-04-14T18:01:00Z",
+              "PropertyDefs": {
+                "PropertyDef": [
+                  {
+                    "IsPrimaryKey": "1",
+                    "Name": "AttendanceId",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "IsNullable": "0"
+                  },
+                  {
+                    "Name": "Notes",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "200",
+                    "MaxLength": "158",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Event",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "Relationships": {
+                      "Relationship": {
+                        "ReferencedObjectDef": "EventDate",
+                        "ReferencedPropertyDef": "EventDateId"
+                      }
+                    }
+                  },
+                  {
+                    "Name": "Person",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "Relationships": {
+                      "Relationship": {
+                        "ReferencedObjectDef": "VIP",
+                        "ReferencedPropertyDef": "VIPId"
+                      }
+                    }
+                  },
+                  {
+                    "Name": "Invited",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "BOOLEAN",
+                    "Length": "",
+                    "MaxLength": "4",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "RSVPed",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "BOOLEAN",
+                    "Length": "",
+                    "MaxLength": "4",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Showedup",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "BOOLEAN",
+                    "Length": "",
+                    "MaxLength": "4",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Name",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "54",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "createdTime",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "DATETIME",
+                    "Length": "",
+                    "MaxLength": "20",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "EntityId": "recSaxb4ISUDNavCk",
+              "Name": "EventDate",
+              "DisplayName": "EventDate",
+              "AirtableName": "Events",
+              "createdTime": "2018-04-14T18:01:00Z",
+              "PropertyDefs": {
+                "PropertyDef": [
+                  {
+                    "IsPrimaryKey": "1",
+                    "Name": "EventDateId",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "IsNullable": "0"
+                  },
+                  {
+                    "Name": "Name",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "54",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Type",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "16",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "StartDate",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "xs:date",
+                    "Length": "",
+                    "MaxLength": "10",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Details",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "MAX",
+                    "MaxLength": "219",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "EndDate",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "xs:date",
+                    "Length": "",
+                    "MaxLength": "10",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Venue",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "Relationships": {
+                      "Relationship": {
+                        "ReferencedObjectDef": "Venue",
+                        "ReferencedPropertyDef": "VenueId"
+                      }
+                    }
+                  },
+                  {
+                    "Name": "ofAttendees",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "INT32",
+                    "Length": "",
+                    "MaxLength": "1",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "ofInvites",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "INT32",
+                    "Length": "",
+                    "MaxLength": "2",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "createdTime",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "DATETIME",
+                    "Length": "",
+                    "MaxLength": "20",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  }
+                ],
+                "COLLECTION": [
+                  {
+                    "Name": "Attendance",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "1"
+                  },
+                  {
+                    "Name": "Attendees",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "EntityId": "recXdHMEAipcZnc4V",
+              "Name": "VIP",
+              "DisplayName": "VIP",
+              "AirtableName": "VIPs",
+              "createdTime": "2018-04-14T18:01:00Z",
+              "PropertyDefs": {
+                "PropertyDef": [
+                  {
+                    "IsPrimaryKey": "1",
+                    "Name": "VIPId",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "IsNullable": "0"
+                  },
+                  {
+                    "Name": "Name",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "54",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Location",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "8",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Email",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "19",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Address",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "50",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Type",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "16",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Notes",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "200",
+                    "MaxLength": "158",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Eventsattended",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "INT32",
+                    "Length": "",
+                    "MaxLength": "1",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "createdTime",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "DATETIME",
+                    "Length": "",
+                    "MaxLength": "20",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  }
+                ],
+                "COLLECTION": {
+                  "Name": "InvitedEvents",
+                  "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                  "DataType": "TEXT",
+                  "Length": "150",
+                  "MaxLength": "17",
+                  "Text": "100",
+                  "IsNullable": "1",
+                  "IsPrimaryKey": "0",
+                  "IsAttribute": "0",
+                  "IsCollection": "1"
+                }
+              }
+            },
+            {
+              "EntityId": "recgVBpL7YyFY0Evh",
+              "Name": "Venue",
+              "DisplayName": "Venue",
+              "AirtableName": "Venues",
+              "createdTime": "2018-04-14T18:01:21Z",
+              "PropertyDefs": {
+                "PropertyDef": [
+                  {
+                    "IsPrimaryKey": "1",
+                    "Name": "VenueId",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "17",
+                    "Text": "100",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "IsNullable": "0"
+                  },
+                  {
+                    "Name": "Name",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "54",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Address",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "150",
+                    "MaxLength": "50",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Notes",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "200",
+                    "MaxLength": "158",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "MapCache",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "MAX",
+                    "MaxLength": "265",
+                    "Text": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "createdTime",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "DATETIME",
+                    "Length": "",
+                    "MaxLength": "20",
+                    "Text": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  }
+                ],
+                "COLLECTION": {
+                  "Name": "HostedEvents",
+                  "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                  "DataType": "TEXT",
+                  "Length": "150",
+                  "MaxLength": "17",
+                  "Text": "100",
+                  "IsNullable": "1",
+                  "IsPrimaryKey": "0",
+                  "IsAttribute": "0",
+                  "IsCollection": "1"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+                    

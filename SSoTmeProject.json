@@ -6,13 +6,13 @@
   "CurrentPath": "",
   "SaveDisabled": false,
   "SSoTmeProjectId": "109a3ca6-4391-4d84-9edc-68585ce5b4eb",
-  "Name": "HomeworkPlus",
-  "RootPath": "C:\\Seeds\\ssotme-ms-airtable-ionic-sassymq-seed",
+  "Name": "AirtableEventMarketing",
+  "RootPath": "C:\\Demo\\AirtableEventMarketing",
   "ProjectSettings": [
     {
-      "ProjectSettingId": "be523bc0-0f67-4c32-9107-76eff038c44a",
+      "ProjectSettingId": "f5373362-4318-4583-8637-98ae2ef46613",
       "Name": "project-name",
-      "Value": "HomeworkPlus"
+      "Value": "AirtableEventMarketing"
     }
   ],
   "ProjectTranspilers": [
@@ -53,7 +53,7 @@
       "ProjectTranspilerId": "8d26e7b0-88ac-4839-8233-7f4605681a65",
       "Name": "AirtableToXml",
       "RelativePath": "/SSoT",
-      "CommandLine": "airtable/airtable-to-xml -p baseId=BASE_ID_HERE -p apiKey=API_KEY_HERE"
+      "CommandLine": "airtable/airtable-to-xml -p baseId=appPLy4Pmy8ZkcVLW -p apiKey=keyAsKv7g3bNC484u"
     },
     {
       "MatchedTranspiler": {
@@ -248,6 +248,43 @@
       "Name": "OdxmlToSqlServerCreateDb",
       "RelativePath": "/SqlServer",
       "CommandLine": "odxml42/odxml-to-sql-server-createdb -i ..\\ODXML\\DataSchema.odxml -o UpdateSchema.sql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
+        "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
+        "Name": "AirtableXmlToSqlServerUpsert",
+        "DisplayName": "Airtable Xml To Sql Server Upsert",
+        "Description": "Creates a SQL Server script to update/insert data (or static data) from the airtable db.",
+        "CreatedOn": "2018-04-12T21:36:05.25",
+        "IsActive": true,
+        "CurrentRoutingKey": "",
+        "LowerName": "airtablexmltosqlserverupsert",
+        "UpperName": "AIRTABLEXMLTOSQLSERVERUPSERT",
+        "LowerHyphenName": "airtable-xml-to-sql-server-upsert",
+        "InputDescriptionMD": "-p only-static-table=true\r\n   to only include entities marked as IsStaticData",
+        "InputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
+        "OutputFileTypeId": "1136a8fc-7ced-47c2-b08d-1ff447a82b01",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "928d5e06-9cc1-4ad4-ab67-5998a63bf68e",
+            "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
+            "Name": "v1",
+            "CreatedOn": "2018-04-12T21:36:07.233",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "a67640a3-4195-4098-a40d-11f47a13befe",
+      "Name": "AirtableXmlToSqlServerUpsert",
+      "RelativePath": "/SqlServer",
+      "CommandLine": "airtable/airtable-xml-to-sql-server-upsert -i ..\\SSoT\\Airtable.xml -i ..\\ODXML\\DataSchema.odxml"
     },
     {
       "MatchedTranspiler": {
@@ -873,43 +910,6 @@
       "Name": "DetailedSPXmlToHtmlDocs",
       "RelativePath": "/DSPXml",
       "CommandLine": "detailed-spxml-to-html -i .\\SSoTmeProject.dspxml"
-    },
-    {
-      "MatchedTranspiler": {
-        "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
-        "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
-        "Name": "AirtableXmlToSqlServerUpsert",
-        "DisplayName": "Airtable Xml To Sql Server Upsert",
-        "Description": "Creates a SQL Server script to update/insert data (or static data) from the airtable db.",
-        "CreatedOn": "2018-04-12T21:36:05.25",
-        "IsActive": true,
-        "CurrentRoutingKey": "",
-        "LowerName": "airtablexmltosqlserverupsert",
-        "UpperName": "AIRTABLEXMLTOSQLSERVERUPSERT",
-        "LowerHyphenName": "airtable-xml-to-sql-server-upsert",
-        "InputDescriptionMD": "-p only-static-table=true\r\n   to only include entities marked as IsStaticData",
-        "InputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
-        "OutputFileTypeId": "1136a8fc-7ced-47c2-b08d-1ff447a82b01",
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "928d5e06-9cc1-4ad4-ab67-5998a63bf68e",
-            "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
-            "Name": "v1",
-            "CreatedOn": "2018-04-12T21:36:07.233",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": null,
-      "ProjectTranspilerId": "a67640a3-4195-4098-a40d-11f47a13befe",
-      "Name": "AirtableXmlToSqlServerUpsert",
-      "RelativePath": "/SqlServer",
-      "CommandLine": "airtable/airtable-xml-to-sql-server-upsert -i ..\\SSoT\\Airtable.xml -i ..\\ODXML\\DataSchema.odxml"
     }
   ]
 }

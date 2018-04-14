@@ -1,0 +1,336 @@
+{
+    "id": "0d6b1e2b-93f8-42be-9676-86669d820757",
+    "name": "AirtableEventMarketing",
+    "order" : [],
+    "folders": [
+            
+                    
+                    
+                    
+        {
+			"id": "44f70eff-ffb5-4556-99fd-998800da5b9a",
+			"name": "Attendances",
+			"folders_order": [],
+			"owner": "1060189",
+            "order" : [
+                "b32ddf0f-7d56-4425-a5f2-9431c46a24e2",
+                "dbbee34a-7a38-4cfd-98c3-502daec637b5",
+                "6a7e3841-24b6-4b87-ad6a-077468c2c922",
+                "6c5b951d-2d90-486c-83e8-0a64f8a9a3cd"
+            ],
+			"collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757"
+		},
+        
+                    
+                    
+                    
+        {
+			"id": "bee93913-41de-4c55-82b0-e080450ccbf2",
+			"name": "EventDates",
+			"folders_order": [],
+			"owner": "1060189",
+            "order" : [
+                "b3f4bb00-e8a3-47c1-b151-c729d4071293",
+                "d3119659-5748-40a0-a8f4-da98b7aaeede",
+                "14dc5ba1-be49-4166-bc95-9b319d6aac78",
+                "5e6ba23a-a58a-4311-b7fa-a33ccd2f6a73"
+            ],
+			"collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757"
+		},
+        
+                    
+                    
+                    
+        {
+			"id": "c82031d7-00a7-4819-b61a-68aa2bfcd0ff",
+			"name": "VIPs",
+			"folders_order": [],
+			"owner": "1060189",
+            "order" : [
+                "5c07964d-a5ea-46f7-b497-b7579de0796c",
+                "0be9baa0-7c2b-4d66-a377-311f7c5d367d",
+                "3497096c-baac-4816-b067-1c77697ae879",
+                "8df22e30-2393-437f-8973-37bbba254903"
+            ],
+			"collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757"
+		},
+        
+                    
+                    
+                    
+        {
+			"id": "c9e86c5f-b148-456f-8b69-dca784a213ba",
+			"name": "Venues",
+			"folders_order": [],
+			"owner": "1060189",
+            "order" : [
+                "937e45ca-c98f-4c17-bc0d-834cb2776274",
+                "592b0857-3cff-4479-bc3e-68de138dbfa3",
+                "46bd5a9e-b495-43dd-bca2-d6d52dc4e3a0",
+                "71ab7c78-2d9a-41e5-83f9-664e8650f834"
+            ],
+			"collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757"
+		}
+        
+
+	],
+    "requests": [
+    
+                    
+                    
+                    
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "b32ddf0f-7d56-4425-a5f2-9431c46a24e2",
+            "name": "Get Attendances",
+            "description": "",
+            "url": "http://localhost:64110/api/Attendances?expand=all",
+            "method": "GET",
+            "headers": "Content-Type: application/json\n",
+            "data": "",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "44f70eff-ffb5-4556-99fd-998800da5b9a",
+            "responses": [],
+            "version": 2
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "dbbee34a-7a38-4cfd-98c3-502daec637b5",
+            "name": "Add Attendance",
+            "description": "",
+            "url": "http://localhost:64110/api/Attendances",
+            "method": "POST",
+            "headers": "Content-Type: application/json\n",
+            "data": "  {\n        \"Name\": \"New Attendance\",\n        \"Description\": \"\"\n    }",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "44f70eff-ffb5-4556-99fd-998800da5b9a",
+            "version": 2,
+            "time": 1511746503557
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "6a7e3841-24b6-4b87-ad6a-077468c2c922",
+            "name": "Update Attendance",
+            "description": "",
+            "url": "http://localhost:64110/api/Attendances",
+            "method": "PUT",
+            "headers": "Content-Type: application/json\n",
+            "data": "{\n    \"AttendanceId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed Attendance\",\n    \"Description\": \"changed description\"\n}",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "44f70eff-ffb5-4556-99fd-998800da5b9a",
+            "version": 2,
+            "time": 1511747864924
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "6c5b951d-2d90-486c-83e8-0a64f8a9a3cd",
+            "name": "Delete Attendance",
+            "description": "",
+            "url": "http://localhost:64110/api/Attendances?attendanceId=00000000-0000-0000-0000-000000000000",
+            "method": "DELETE",
+            "headers": "",
+            "data": [], 
+            "dataMode": "params",
+            "timestamp": 0,
+            "folder" : "44f70eff-ffb5-4556-99fd-998800da5b9a",
+            "version": 2,
+            "time": 1511747257887
+        },
+        
+                    
+                    
+                    
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "b3f4bb00-e8a3-47c1-b151-c729d4071293",
+            "name": "Get EventDates",
+            "description": "",
+            "url": "http://localhost:64110/api/EventDates?expand=all",
+            "method": "GET",
+            "headers": "Content-Type: application/json\n",
+            "data": "",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "bee93913-41de-4c55-82b0-e080450ccbf2",
+            "responses": [],
+            "version": 2
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "d3119659-5748-40a0-a8f4-da98b7aaeede",
+            "name": "Add EventDate",
+            "description": "",
+            "url": "http://localhost:64110/api/EventDates",
+            "method": "POST",
+            "headers": "Content-Type: application/json\n",
+            "data": "  {\n        \"Name\": \"New EventDate\",\n        \"Description\": \"\"\n    }",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "bee93913-41de-4c55-82b0-e080450ccbf2",
+            "version": 2,
+            "time": 1511746503557
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "14dc5ba1-be49-4166-bc95-9b319d6aac78",
+            "name": "Update EventDate",
+            "description": "",
+            "url": "http://localhost:64110/api/EventDates",
+            "method": "PUT",
+            "headers": "Content-Type: application/json\n",
+            "data": "{\n    \"EventDateId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed EventDate\",\n    \"Description\": \"changed description\"\n}",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "bee93913-41de-4c55-82b0-e080450ccbf2",
+            "version": 2,
+            "time": 1511747864924
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "5e6ba23a-a58a-4311-b7fa-a33ccd2f6a73",
+            "name": "Delete EventDate",
+            "description": "",
+            "url": "http://localhost:64110/api/EventDates?eventdateId=00000000-0000-0000-0000-000000000000",
+            "method": "DELETE",
+            "headers": "",
+            "data": [], 
+            "dataMode": "params",
+            "timestamp": 0,
+            "folder" : "bee93913-41de-4c55-82b0-e080450ccbf2",
+            "version": 2,
+            "time": 1511747257887
+        },
+        
+                    
+                    
+                    
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "5c07964d-a5ea-46f7-b497-b7579de0796c",
+            "name": "Get VIPs",
+            "description": "",
+            "url": "http://localhost:64110/api/VIPs?expand=all",
+            "method": "GET",
+            "headers": "Content-Type: application/json\n",
+            "data": "",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "c82031d7-00a7-4819-b61a-68aa2bfcd0ff",
+            "responses": [],
+            "version": 2
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "0be9baa0-7c2b-4d66-a377-311f7c5d367d",
+            "name": "Add VIP",
+            "description": "",
+            "url": "http://localhost:64110/api/VIPs",
+            "method": "POST",
+            "headers": "Content-Type: application/json\n",
+            "data": "  {\n        \"Name\": \"New VIP\",\n        \"Description\": \"\"\n    }",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "c82031d7-00a7-4819-b61a-68aa2bfcd0ff",
+            "version": 2,
+            "time": 1511746503557
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "3497096c-baac-4816-b067-1c77697ae879",
+            "name": "Update VIP",
+            "description": "",
+            "url": "http://localhost:64110/api/VIPs",
+            "method": "PUT",
+            "headers": "Content-Type: application/json\n",
+            "data": "{\n    \"VIPId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed VIP\",\n    \"Description\": \"changed description\"\n}",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "c82031d7-00a7-4819-b61a-68aa2bfcd0ff",
+            "version": 2,
+            "time": 1511747864924
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "8df22e30-2393-437f-8973-37bbba254903",
+            "name": "Delete VIP",
+            "description": "",
+            "url": "http://localhost:64110/api/VIPs?vipId=00000000-0000-0000-0000-000000000000",
+            "method": "DELETE",
+            "headers": "",
+            "data": [], 
+            "dataMode": "params",
+            "timestamp": 0,
+            "folder" : "c82031d7-00a7-4819-b61a-68aa2bfcd0ff",
+            "version": 2,
+            "time": 1511747257887
+        },
+        
+                    
+                    
+                    
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "937e45ca-c98f-4c17-bc0d-834cb2776274",
+            "name": "Get Venues",
+            "description": "",
+            "url": "http://localhost:64110/api/Venues?expand=all",
+            "method": "GET",
+            "headers": "Content-Type: application/json\n",
+            "data": "",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "c9e86c5f-b148-456f-8b69-dca784a213ba",
+            "responses": [],
+            "version": 2
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "592b0857-3cff-4479-bc3e-68de138dbfa3",
+            "name": "Add Venue",
+            "description": "",
+            "url": "http://localhost:64110/api/Venues",
+            "method": "POST",
+            "headers": "Content-Type: application/json\n",
+            "data": "  {\n        \"Name\": \"New Venue\",\n        \"Description\": \"\"\n    }",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "c9e86c5f-b148-456f-8b69-dca784a213ba",
+            "version": 2,
+            "time": 1511746503557
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "46bd5a9e-b495-43dd-bca2-d6d52dc4e3a0",
+            "name": "Update Venue",
+            "description": "",
+            "url": "http://localhost:64110/api/Venues",
+            "method": "PUT",
+            "headers": "Content-Type: application/json\n",
+            "data": "{\n    \"VenueId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed Venue\",\n    \"Description\": \"changed description\"\n}",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "c9e86c5f-b148-456f-8b69-dca784a213ba",
+            "version": 2,
+            "time": 1511747864924
+        },
+        {
+            "collectionId": "0d6b1e2b-93f8-42be-9676-86669d820757",
+            "id": "71ab7c78-2d9a-41e5-83f9-664e8650f834",
+            "name": "Delete Venue",
+            "description": "",
+            "url": "http://localhost:64110/api/Venues?venueId=00000000-0000-0000-0000-000000000000",
+            "method": "DELETE",
+            "headers": "",
+            "data": [], 
+            "dataMode": "params",
+            "timestamp": 0,
+            "folder" : "c9e86c5f-b148-456f-8b69-dca784a213ba",
+            "version": 2,
+            "time": 1511747257887
+        }
+        
+    ]
+}

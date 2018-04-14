@@ -24,104 +24,44 @@ export class RestAPIService {
       
       
       
-    public letterGrades: any[];
-    getLetterGrades() {
+    public attendances: any[];
+    getAttendances() {
 
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/LetterGrades?expand=all')
+            this.http.get(this.apiUrl + '/Attendances?expand=all')
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.letterGrades = data;
-                    resolve(this.letterGrades);
+                    this.attendances = data;
+                    resolve(this.attendances);
                 });
         });
     }
 
-    public letterGrade: any[];
-    getLetterGrade(letterGrade: any) {
+    public attendance: any[];
+    getAttendance(attendance: any) {
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/LetterGrades?expand=all&letterGradeId=' + letterGrade.LetterGradeId)
+            this.http.get(this.apiUrl + '/Attendances?expand=all&attendanceId=' + attendance.AttendanceId)
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.letterGrade = data;
-                    resolve(this.letterGrade);
+                    this.attendance = data;
+                    resolve(this.attendance);
                 });
         });
     }
 
     
-    updateLetterGrade(letterGrade: any) {
+    updateAttendance(attendance: any) {
          return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/LetterGrades', letterGrade)
+            this.http.put(this.apiUrl + '/Attendances', attendance)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
                 });
         });
     }
-    addNewLetterGrade(letterGrade: any) {
+    addNewAttendance(attendance: any) {
          return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/LetterGrades', letterGrade)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-
-    deleteLetterGrade(letterGrade: any) {
-         return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/LetterGrades?letterGradeId=' + letterGrade.LetterGradeId)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-    
-      
-      
-      
-      
-      
-    public assignments: any[];
-    getAssignments() {
-
-        return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Assignments?expand=all')
-                .map(res => res.json())
-                .subscribe(data => {
-                    this.assignments = data;
-                    resolve(this.assignments);
-                });
-        });
-    }
-
-    public assignment: any[];
-    getAssignment(assignment: any) {
-        return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Assignments?expand=all&assignmentId=' + assignment.AssignmentId)
-                .map(res => res.json())
-                .subscribe(data => {
-                    this.assignment = data;
-                    resolve(this.assignment);
-                });
-        });
-    }
-
-    
-    updateAssignment(assignment: any) {
-         return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/Assignments', assignment)
-                .map(res => res.json())
-                .subscribe(data => {
-                    resolve(data);
-                });
-        });
-    }
-    addNewAssignment(assignment: any) {
-         return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/Assignments', assignment)
+            this.http.post(this.apiUrl + '/Attendances', attendance)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -129,9 +69,9 @@ export class RestAPIService {
         });
     }
 
-    deleteAssignment(assignment: any) {
+    deleteAttendance(attendance: any) {
          return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/Assignments?assignmentId=' + assignment.AssignmentId)
+            this.http.delete(this.apiUrl + '/Attendances?attendanceId=' + attendance.AttendanceId)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -144,44 +84,44 @@ export class RestAPIService {
       
       
       
-    public courses: any[];
-    getCourses() {
+    public eventDates: any[];
+    getEventDates() {
 
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Courses?expand=all')
+            this.http.get(this.apiUrl + '/EventDates?expand=all')
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.courses = data;
-                    resolve(this.courses);
+                    this.eventDates = data;
+                    resolve(this.eventDates);
                 });
         });
     }
 
-    public course: any[];
-    getCourse(course: any) {
+    public eventDate: any[];
+    getEventDate(eventDate: any) {
         return new Promise(resolve => {
-            this.http.get(this.apiUrl + '/Courses?expand=all&courseId=' + course.CourseId)
+            this.http.get(this.apiUrl + '/EventDates?expand=all&eventDateId=' + eventDate.EventDateId)
                 .map(res => res.json())
                 .subscribe(data => {
-                    this.course = data;
-                    resolve(this.course);
+                    this.eventDate = data;
+                    resolve(this.eventDate);
                 });
         });
     }
 
     
-    updateCourse(course: any) {
+    updateEventDate(eventDate: any) {
          return new Promise(resolve => {
-            this.http.put(this.apiUrl + '/Courses', course)
+            this.http.put(this.apiUrl + '/EventDates', eventDate)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
                 });
         });
     }
-    addNewCourse(course: any) {
+    addNewEventDate(eventDate: any) {
          return new Promise(resolve => {
-            this.http.post(this.apiUrl + '/Courses', course)
+            this.http.post(this.apiUrl + '/EventDates', eventDate)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);
@@ -189,9 +129,129 @@ export class RestAPIService {
         });
     }
 
-    deleteCourse(course: any) {
+    deleteEventDate(eventDate: any) {
          return new Promise(resolve => {
-            this.http.delete(this.apiUrl + '/Courses?courseId=' + course.CourseId)
+            this.http.delete(this.apiUrl + '/EventDates?eventDateId=' + eventDate.EventDateId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public vIPs: any[];
+    getVIPs() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/VIPs?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.vIPs = data;
+                    resolve(this.vIPs);
+                });
+        });
+    }
+
+    public vIP: any[];
+    getVIP(vIP: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/VIPs?expand=all&vIPId=' + vIP.VIPId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.vIP = data;
+                    resolve(this.vIP);
+                });
+        });
+    }
+
+    
+    updateVIP(vIP: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/VIPs', vIP)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewVIP(vIP: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/VIPs', vIP)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteVIP(vIP: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/VIPs?vIPId=' + vIP.VIPId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
+    public venues: any[];
+    getVenues() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Venues?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.venues = data;
+                    resolve(this.venues);
+                });
+        });
+    }
+
+    public venue: any[];
+    getVenue(venue: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/Venues?expand=all&venueId=' + venue.VenueId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.venue = data;
+                    resolve(this.venue);
+                });
+        });
+    }
+
+    
+    updateVenue(venue: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/Venues', venue)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewVenue(venue: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/Venues', venue)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteVenue(venue: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/Venues?venueId=' + venue.VenueId)
                 .map(res => res.json())
                 .subscribe(data => {
                     resolve(data);

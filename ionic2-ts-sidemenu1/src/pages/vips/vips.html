@@ -1,0 +1,47 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                VIPs
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     VIPs
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!vIPs || vIPs.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No VIPs yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="vIPs && vIPs.length > 0">
+                        <button ion-item="" (click)="goToState(VIPState, vIP)" *ngFor="let vIP of vIPs">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ vIP.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewVIP()">
+                        <ion-icon name="add" item-left=""></ion-icon> New VIP
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

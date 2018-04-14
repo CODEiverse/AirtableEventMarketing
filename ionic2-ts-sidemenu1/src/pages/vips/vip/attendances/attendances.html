@@ -1,0 +1,50 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ this.parent.vIP.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - Attendances</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     Attendances
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!attendances || attendances.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No Attendances yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="attendances && attendances.length > 0">
+                        <button ion-item="" (click)="goToState(AttendanceState, attendance)" *ngFor="let attendance of attendances">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ attendance.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewAttendance()">
+                        <ion-icon name="add" item-left=""></ion-icon> New Attendance
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

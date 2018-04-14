@@ -1,0 +1,198 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ eventdate.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - EventDate</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header *ngIf="!editMode">
+                    
+                        <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input [readonly]="true" type="text" name="eventdateName" [(ngModel)]="eventdate.Name"></ion-input>
+                                
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Type</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Type" 
+                                                name="eventdateTypeName" 
+                                                [(ngModel)]="eventdate.Type"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>StartDate</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="StartDate" 
+                                                name="eventdateStartDateName" 
+                                                [(ngModel)]="eventdate.StartDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Details</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Details" 
+                                                name="eventdateDetailsName" 
+                                                [(ngModel)]="eventdate.Details"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>EndDate</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="EndDate" 
+                                                name="eventdateEndDateName" 
+                                                [(ngModel)]="eventdate.EndDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ofAttendees</ion-label>
+                                <ion-input type="number"
+                                                disabled="true" 
+                                                placeholder="ofAttendees" 
+                                                name="eventdateofAttendeesName" 
+                                                [(ngModel)]="eventdate.ofAttendees"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ofInvites</ion-label>
+                                <ion-input type="number"
+                                                disabled="true" 
+                                                placeholder="ofInvites" 
+                                                name="eventdateofInvitesName" 
+                                                [(ngModel)]="eventdate.ofInvites"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                disabled="true" 
+                                                placeholder="createdTime" 
+                                                name="eventdatecreatedTimeName" 
+                                                [(ngModel)]="eventdate.createdTime"></ion-input>
+                            </ion-item>
+                            
+
+                             <ion-row right="">
+                                <ion-col text-right="">   
+                                    <button ion-button="" (click)="editMode = true"><ion-icon name="create"></ion-icon> Edit</button>
+                                </ion-col> 
+                            </ion-row>
+                                            
+                </ion-card-header>
+                    
+                        <div *ngIf="editMode">
+                            <ion-item>
+                                <ion-label>Name</ion-label>
+                                <ion-input type="text" name="eventdateName" [(ngModel)]="eventdate.Name"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Type</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Type" 
+                                                name="eventdateTypeName" 
+                                                [(ngModel)]="eventdate.Type"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>StartDate</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="StartDate" 
+                                                name="eventdateStartDateName" 
+                                                [(ngModel)]="eventdate.StartDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Details</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Details" 
+                                                name="eventdateDetailsName" 
+                                                [(ngModel)]="eventdate.Details"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>EndDate</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="EndDate" 
+                                                name="eventdateEndDateName" 
+                                                [(ngModel)]="eventdate.EndDate"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ofAttendees</ion-label>
+                                <ion-input type="number"
+                                                placeholder="ofAttendees" 
+                                                name="eventdateofAttendeesName" 
+                                                [(ngModel)]="eventdate.ofAttendees"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>ofInvites</ion-label>
+                                <ion-input type="number"
+                                                placeholder="ofInvites" 
+                                                name="eventdateofInvitesName" 
+                                                [(ngModel)]="eventdate.ofInvites"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>createdTime</ion-label>
+                                <ion-input type="datetime"
+                                                placeholder="createdTime" 
+                                                name="eventdatecreatedTimeName" 
+                                                [(ngModel)]="eventdate.createdTime"></ion-input>
+                            </ion-item>
+                            
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" (click)="updateEventDate(eventdate)">
+                                        <ion-icon name="checkmark" item-left=""></ion-icon> Ok
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col text-left="">
+                                    <button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteEventDate()">
+                                        <ion-icon name="trash" item-left=""></ion-icon> Delete
+                                    </button>
+                                </ion-col>
+                                <ion-col text-right="">
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    
+
+                <p>
+                
+                More about {{ eventdate.Name }} can go here...
+                
+
+                
+                </p>
+
+                
+
+            
+    </ion-card>
+
+</ion-content>

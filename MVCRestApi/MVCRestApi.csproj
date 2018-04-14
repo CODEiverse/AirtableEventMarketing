@@ -179,6 +179,22 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\api\AttendancesController.cs" />
+    <Compile Include="Controllers\api\AttendancesController.designer.cs">
+      <DependentUpon>AttendancesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\EventDatesController.cs" />
+    <Compile Include="Controllers\api\EventDatesController.designer.cs">
+      <DependentUpon>EventDatesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\VenuesController.cs" />
+    <Compile Include="Controllers\api\VenuesController.designer.cs">
+      <DependentUpon>VenuesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\api\VIPsController.cs" />
+    <Compile Include="Controllers\api\VIPsController.designer.cs">
+      <DependentUpon>VIPsController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
